@@ -121,3 +121,7 @@ body{
   .dark-color {
     color: #20247b;
   }
+
+  .red {
+    color: red;
+  }

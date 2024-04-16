@@ -9,7 +9,7 @@ function App() {
   const [profiles, setProfiles] = useState([
     {
       name:"Joaquín Delhom",
-      age:45,
+      age:17,
       bio:`I design and develop services for customers of all 
       sizes, specializing in creating stylish, modern websites, web
       services and online stores. My passion is to design digital user

@@ -1,7 +1,10 @@
 import "./Profile.css";
 
 export default function Profile({name, bio, image, age, email, skills}){
-    const skillsList = skills.map((skill,index) =>  <span className="badge bg-success mr-2" key={index}>{skill}</span>)
+    const skillsList = skills.map((skill,index) => {
+      const badge = index%2===0? "bg-success": "bg-warning"
+      return <span className={`badge ${index%2===0? "bg-success": "bg-warning"}  mr-2`} key={index}>{skill}</span>
+    } )
     return (
         <section className="section about-section gray-bg" id="about">
         <div className="container">
@@ -16,7 +19,7 @@ export default function Profile({name, bio, image, age, email, skills}){
                   <div className="col-md-6">
                     <div className="media">
                       <label>Age</label>
-                      <p>{age}</p>
+                      <p className={age<18 && 'red'}>{age}</p>
                     </div>
                   </div>
                   <div className="col-md-6">
